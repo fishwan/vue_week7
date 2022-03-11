@@ -28,6 +28,9 @@
         <div class="d-grid gap-2 mt-3">
           <button type="submit" class="btn btn-dark btn-lg">登入</button>
         </div>
+        <div class="text-center mt-3">
+          <router-link to="/">回前台</router-link>
+        </div>
       </form>
     </div>
   </div>
