@@ -1,0 +1,67 @@
+/* page */
+.product-item {
+    border: none;
+    margin-bottom: 2.4rem;
+    .card-img {
+        @include fluidImg;
+    }
+}
+
+.cart-item,
+.cart-item-title {
+    padding: 1.5rem;
+    position: relative;
+    border-bottom: 1px solid #000;
+    .cart-item-img {
+        flex: 1;
+        max-width: 120px;
+    }
+    .cart-item-body {
+        flex: 2;
+        margin-left: 1.5rem;
+    }
+}
+
+.cart-item {
+    .cart-item-img {
+        @include fluidImg;
+    }
+}
+
+.cart-sale {
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 991px) {
+    .cart {
+        margin-bottom: 3rem;
+    }
+    .cart-item,
+    .cart-item-title{
+        .cart-item-sale:before {
+            content: '單價：';
+        }
+        .cart-item-subtotal:before {
+            content: '小計：';
+        }
+        .cart-item-delete {
+            position: absolute;
+            right: 1.5rem;
+            top: .5rem;
+        }
+    }
+    .cart-item-title {
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .cart-item-body {
+        flex: 6;
+    }
+    .cart-item-sale,
+    .cart-item-subtotal,
+    .cart-item-delete {
+        text-align: center;
+    }
+}

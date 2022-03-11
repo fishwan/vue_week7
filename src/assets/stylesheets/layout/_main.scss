@@ -1,0 +1,39 @@
+/* layout */
+.container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.menu {
+    margin-bottom: 3rem;
+    a {
+        text-decoration: none;
+        padding: 0 .75rem;
+        font-weight: 600;
+        color: #000;
+        &:hover {
+            text-decoration: underline;
+        }
+        &.router-link-exact-active {
+            color: $danger;
+            text-decoration: underline;
+        }
+    }
+}
+
+.page-title {
+    font-size: 24px;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    position: relative;
+    z-index: -1;
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        display: block;
+        height: 3px;
+        background-color: #000;
+        bottom: -1rem;
+    }
+}
